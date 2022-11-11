@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Portfolio - {{nom_page}}</title>
+{% endblock %}
+
+{% block content %}
+    <!-- SECTION GRISE TITRE -->
+    <div class='container'>
+        <h2 class = badge-title>
+            {{ dico['titre'] |safe }}
+        </h2>
+        <!-- SECTION CONTENU -->
+
+        <div class="section">
+            <div class="texte-avec-ligne-verticale">
+                <p>
+                    {{ dico['intro'] | safe}}
+                    <br><br>
+                    <div class="important underline">Outils utilisés</div> : <b>{{ dico['outils'] |safe }}</b>
+                </p>
+            </div>
+
+            {% for dic in liste_dicos_algos_Python %}
+
+                <h3 class = 'badge-title mt-4'>
+                    {{dic['titre'] | safe}} : </h3>
+
+                {{dic['corps'] | safe}}
+
+                <div class = "portfolio-detail">
+
+                    <a class='contact-button'
+                    style="display: inline-block; margin-top: 8px;"
+                    href="{{url_for('static', filename = 'programmes/'+dic['prog'])}}" target="_blank">Voir la solution programmée en Python</a>
+                </div>
+
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

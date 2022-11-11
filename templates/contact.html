@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Contact</title>
+{% endblock %}
+
+{% block content %}
+    <div class='container'>
+        <h2 class = badge-title>Contact</h2> 
+
+        <div class="contactgroupe"  >
+            <table>
+                <tr >
+                    <td class="col1"> <a href="https://www.linkedin.com/in/jonathan-graff" target="_blank"><img  src="{{url_for('static', filename = 'images/linkedin.png')}}"> </a></td>
+                    <td><a href="https://www.linkedin.com/in/jonathan-graff" target="_blank"> linkedin.com/in/jonathan-graff </a></td>
+                </tr>
+                <tr>
+                    <td class="col1"> <a href="tel:+33766474681" target="_blank"><img  src="{{url_for('static', filename = 'images/whatsapp.png')}}" style="height:80px"> </a></td>
+                    <td><a href="tel:+33766474681" target="_blank"> 07 66 47 46 81 </a></td>
+                </tr>
+                <tr>
+                    <td class="col1"> <a href="mailto:jonathan.graff@hotmail.fr?subject=Contact"><img  src="{{url_for('static', filename = 'images/arobase.jpg')}}" style="height:50px"> </style></a></td>
+                    <td><a href="mailto:jonathan.graff@hotmail.fr?subject=Contact"> jonathan.graff@hotmail.fr</a></td>
+                </tr>
+                <tr>
+                    <td class="col1"> <a href="www.github.com/jonathangraff"><img  src="{{url_for('static', filename = 'images/github.png')}}" > </style></a></td>
+                    <td><a href="www.github.com/jonathangraff"> github.com/jonathangraff</a></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+{% endblock %}

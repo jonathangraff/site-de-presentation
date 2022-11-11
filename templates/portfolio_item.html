@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Portfolio - {{nom_page}}</title>
+{% endblock %}
+
+{% block content %}
+    <!-- SECTION GRISE TITRE -->
+    <div class='container'>
+        <h2 class = badge-title>
+            {{ dico['titre'] |safe }}
+        </h2>
+        <!-- SECTION CONTENU -->
+
+        <div class="section">
+            <div class="texte-avec-ligne-verticale">
+                <p>
+                    {{ dico['intro'] | safe}}
+                    <br><br>
+                    <div class="important underline">Outils utilisés</div> : <b>{{ dico['outils'] |safe }}</b>
+                </p>
+            </div>
+            <div class = "portfolio-detail">
+                {% if 'image' in dico.keys() %}
+                    <a href="{{ dico['lien'] }}" target="_blank">
+                        <img class = "portfolio-detail" src="{{url_for('static', filename='images/'+dico['image'])}}">
+                    </a>
+                {% endif %}
+                <br>
+                {% if 'lien' in dico.keys() %}
+                    <a class='contact-button' style="display: inline-block; margin-top: 8px;"
+                    href="{{ dico['lien'] }}" target="_blank">Voir la page GitHub du projet</a>
+                {% endif %}
+            </div>
+
+            {% if 'autre' in dico.keys() %}
+                {{ dico['autre' ] | safe }}
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
+
+{% block autre %}
+zz
+{% endblock %}

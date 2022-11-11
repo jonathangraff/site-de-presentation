@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>Portfolio - Jonathan GRAFF</title>
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+    <h2 class='badge-title'>Portfolio</h2>
+
+    <p>Voici différents projets que j'ai créés jusqu'à aujourd'hui. Il s'agit
+        de projets destinés à me familiariser avec les différents outils
+        étudiés, ainsi que diverses réalisations au cours de mes études.
+    </p>
+    <div class="section ">
+        {% for index, (nom_page, dico) in enumerate(liste_dicos_portfolio.items()) %}
+        <table class='col-portfolio {% if index%2==1 %} float-right {% endif %}'
+               style='display:inline-block'>
+            <tr>
+                <td>
+                    <div class='barre-verticale'></div>
+                </td>
+                <td style='width:100%;'>
+                    <a href="{{nom_page }}">
+                        {% if dico['cover_image'] %}
+                        <img style='width:100%'
+                             src="{{url_for('static', filename='images/'+dico['cover_image'])}}">
+                        {% else %}
+                        <img style='width:100%'
+                             src="{{url_for('static', filename='images/'+dico['image'])}}">
+                        {% endif %}
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td align='center'>
+                    <a class='contact-button'
+                       href="{{ nom_page }}">
+                        {{ dico['titre'] }}</a>
+                </td>
+                {% if index==nb_projets-2 %} <br><br><br> {% endif %}
+            </tr>
+        </table>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

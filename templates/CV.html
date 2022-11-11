@@ -1,0 +1,219 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>CV - Jonathan GRAFF</title>
+{% endblock %}
+
+{% block content %}
+<div class='container'>
+
+        <h2 class ='badge-title'>Curriculum Vitae</h2>
+        <div class='pdf'>
+            <a  class='contact-button'  href = "{{url_for('static', filename='CV Jonathan GRAFF.pdf')}}">format PDF</a>
+        </div>
+        <div style="float:right">
+            <img src = "{{url_for('static', filename = 'images/profile.png')}}" style="height:160px" >
+        </div>
+        <div class = CVgroupe><h3>Etat civil</h3>
+            <b> <p style="font-size:30px">Jonathan GRAFF</b> </p> <br>
+            Né le 13 juillet 1985 à Strasbourg
+        </div>
+
+        <div class = 'CVgroupe ' style = "background-color: var(--color3);">
+            <h3>Formation</h3>
+            <table>
+                <tr>
+                    <td class='formation'><b>2022 : </b>  </td>
+                    <td ><ul class="=bullet"><li><div class='important'>Java Spring, Javascript, Bootstrap</div> : Formations en ligne sur la plateforme Udemy</li></ul> </td>
+                </tr>
+                <tr>
+                    <td class='formation'><b>2021 : </b>  </td>
+                    <td ><ul class="=bullet"><li><div class='important'>Développeur Python Fullstack</div> : Formations en ligne sur la plateforme Udemy</li></ul> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><ul class="=bullet"><li><div class='important'>Master CSMI </div>(Calcul Scientifique et Mathématiques de l'Information) à l'université de Strasbourg : formation de mathématiques appliquées à l'informatique</li></ul> </td>
+                </tr>
+                <tr>
+                    <td ><b>2009 :  </b>  </td>
+                    <td><ul class="=bullet"><li><div class='important'>Master</div> et <div class='important'>Magistère</div> de mathématiques fondamentales</li></ul> </td>
+                </tr>
+                <tr>
+                    <td><b>2008 : </b> </td>
+                    <td><ul class="=bullet"><li><div class='important'>Agrégation</div> externe de mathématiques</li></li></ul> </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class = CVgroupe>
+            <h3>Expérience professionnelle</h3>
+
+            <table>
+                <tr>
+                    <td style="width:105px"><b>2022 :  </b>  </td>
+                    <td ><div class='important' style="text-decoration: underline">Développeur Python  </div><div class='ville'>Société Générale - Paris </div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down>Développement et maintenance d'une API REST permettant aux différents services de la banque la création et la gestion de leur base de données. <br>
+                        <b>Stack technique :</b> Python, Flask, Celery, Oracle, PostgreSQL, Azure, AWS.
+                        </td>
+                </tr>
+
+                <tr>
+                    <td style="width:105px"><b>2022 : </b>  </td>
+                    <td ><div class='important' style="text-decoration: underline;">Ingénieur support niveau 2 - 6 mois (Freelance)</div><div class='ville'> Flowbird - Besançon </div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down>Analyse des problèmes back-end dûs aux horodateurs connectés et résolution
+                        de ceux-ci ou transmission au service R&D.<br>
+                        Recherche en base de données, lecture et analyse de logs.
+                        Création de programmes en Python pour simplifier les tâches répétitives.</td>
+                </tr>
+
+                <tr>
+                    <td style="width:105px"><b>2020 à 2021 : </b>  </td>
+                    <td ><a class='important' href="portfolio-stageM2.html">Stage de master</a><div class='ville'>Laboratoires Icube - Illkirch</div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down><strong> Utilisation des algèbres géométriques pour implémenter en Coq
+                        des algorithmes de pilotage de bras de robots </strong><a style='text-decoration : none' href="{{url_for('portfolio_item', nom_page='stageM2-Coq')}}">(détails ici)</a></td>
+                </tr>
+
+                <tr>
+                    <td ><b> </b>  </td>
+                    <td ><a class='important' href="portfolio-projetM2.html">Projet de master 2</a><div class='ville'>Université de Strasbourg </div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down><strong>Apprentissage par renforcement profond pour des problèmes d’analyse combinatoire</strong>
+                        <a style='text-decoration : none' href="{{url_for('portfolio_item', nom_page='projetM2-data')}}">(détails ici)</a><br>
+                        Implémentation en Python grâce à la librairie Tensorflow d'un agent qui a appris à se déplacer dans une grille grâce à un système de récompense
+                        pour pouvoir trouver un "trésor" en évitant des obstacles et des "bombes".
+                    </td>
+                </tr>
+
+                <tr>
+                    <td ><b> </b>  </td>
+                    <td ><a class='important' href="portfolio-stageM1.html">Stage de master 1</a><div class='ville'>Université de Strasbourg </div></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down><strong>Implémentation en Typescript d’un algorithme permettant à partir
+                        d’une surface de la déformer par itérations en surface minimale.</strong>
+                        <a style='text-decoration : none' href="{{url_for('portfolio_item', nom_page='stageM1-Typescript')}}">(détails ici)</a></td>
+                </tr>
+
+                <tr>
+                    <td ><b>2008 à 2021 :  </b>  </td>
+                    <td ><div class='important' style="text-decoration: underline;">Professeur agrégé de mathématiques en lycée et classes préparatoires</div><div class='ville'>Strasbourg - La Havane (Cuba) </div> </td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class=down><strong>Enseignement des mathématiques et de l'informatique en lycée et en classes prépas</strong> <br>
+                        Onze ans à Strasbourg et deux ans au lycée français de la Havane à Cuba, dans un contexte très
+                        international.<br>
+                        Mise en place de l'enseignement des algorithmes et de Python aux élèves, ainsi qu'aux professeurs.<br>
+                        Conception et correction régulière d'exercices et d'activités intéréssants et adaptés sur les mathématiques et sur l'algorithmique (triangles de Sierpinski, calcul d'aire avec Monte-Carlo...).
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class = CVgroupe style = "background-color: var(--color3)">
+            <h3>Compétences</h3>
+
+            <ul class = bullet>
+                <li><div class='important'>Informatique : </div></li>
+                    <ul class="competence">
+                        <li><div style="margin-bottom:10px"><b>Langages informatiques :</b> <div class='important'> Python, Java,</div> HTML, CSS, Javascript, C, C++, Typescript, calcul parallèle (MPI)<br></div>
+
+                            <div class = logo>
+                                <img src="{{url_for('static', filename = 'images/Python.png')}}">
+                                <img src="{{url_for('static', filename = 'images/Java.png')}}">
+                                <img src="{{url_for('static', filename = 'images/html.png')}}">
+                                <img src="{{url_for('static', filename = 'images/css3.png')}}">
+                                <img src="{{url_for('static', filename = 'images/javascript.png')}}">
+                                <img src="{{url_for('static', filename = 'images/C.png')}}">
+                                <img src="{{url_for('static', filename = 'images/C++.png')}}">
+                            </div>
+                        </li>
+                        <li> <div style="margin-bottom:10px"><b>Frameworks et librairies Python :</b> Flask, Django, Kivy, Unittest, Tensorflow, Keras, Sklearn, Panda, Numpy, Matplotlib<br>
+                            </div>
+                            <div class = logo>
+                                <img src="{{url_for('static', filename = 'images/Flask.png')}}" >
+                                <img src="{{url_for('static', filename = 'images/django.png')}}" >
+                                <img src="{{url_for('static', filename = 'images/kivy.png')}}" >
+                                <img src="{{url_for('static', filename = 'images/tensorflow.png')}}" >
+                            </div>
+                        </li>
+                        <li> <div style="margin-bottom:10px"><b>Autres frameworks et librairies :</b> Bootstrap, JQuery, Spring<br>
+                            </div>
+                            <div class = logo>
+                                <img src="{{url_for('static', filename = 'images/Bootstrap.png')}}">
+                                <img src="{{url_for('static', filename = 'images/jquery.png')}}" >
+                                <img src="{{url_for('static', filename = 'images/Spring.png')}}">
+                            </div>
+                        </li>
+                        <li> <div style="margin-bottom:10px"><b>Bases de données :</b>  SQL, PostgreSQL, Elastic, Oracle, Azure, AWS. Dbeaver<br>
+                            </div>
+                            <div class = logo>
+                                <img src="{{url_for('static', filename = 'images/sql.png')}}">
+                                <img src="{{url_for('static', filename = 'images/Postgresql.png')}}" >
+                                <img src="{{url_for('static', filename = 'images/elastic.png')}}">
+                                <img src="{{url_for('static', filename = 'images/oracle.png')}}">
+                                <img src="{{url_for('static', filename = 'images/Azure.png')}}">
+                                <img src="{{url_for('static', filename = 'images/AWS.png')}}">
+                                <img src="{{url_for('static', filename = 'images/dbeaver.png')}}">
+                            </div>
+                        </li>
+                        <li> <div style="margin-bottom:10px"><b>Autres :</b> Linux, Windows, Git, Docker, Postman, Salesforce, Jira, Celery, intégration continue, méthodes Agile<br>
+                        </div>
+                        <div class = logo>
+                            <img src="{{url_for('static', filename = 'images/Linux.png')}}">
+                            <img src="{{url_for('static', filename = 'images/Windows.png')}}" >
+                            <img src="{{url_for('static', filename = 'images/Git.png')}}">
+                            <img src="{{url_for('static', filename = 'images/Docker.png')}}">
+                            <img src="{{url_for('static', filename = 'images/Postman.png')}}">
+                            <img src="{{url_for('static', filename = 'images/Salesforce.png')}}">
+                            <img src="{{url_for('static', filename = 'images/Jira.png')}}">
+                            <img src="{{url_for('static', filename = 'images/celery.png')}}">
+                        </div>
+                    </li>
+                    </ul>
+                </li>
+
+                <li><div class="important" >Mathématiques :</div> Data, Statistiques, Deep-learning, Réseaux de neurones, Modèles aléatoires, Traitement
+                    du signal, Traitement de l’image, Graphes, Calcul scientifique, Optimisation
+                </li>
+            </ul>
+        </div>
+        <div class = 'CVgroupe drapeau-padding'>
+            <h3>Langues parlées</h3>
+
+            <ul style = "list-style:none;"><li><img class=drapeau src="{{url_for('static', filename = 'images/france.png')}}" >
+                <div class="important" >Français</div> : langue maternelle
+                </li>
+                <li> <img class=drapeau src="{{url_for('static', filename = 'images/angleterre.png')}}" >
+                    <div class="important" >Anglais</div> : bilingue</li>
+                <li><img class=drapeau src="{{url_for('static', filename = 'images/espagne.png')}}" > <div class="important" >Espagnol</div> : très bonne maîtrise </li>
+                <li> <img class=drapeau src="{{url_for('static', filename = 'images/allemagne.png')}}" > Allemand : notions</li>
+                <li><img class=drapeau src="{{url_for('static', filename = 'images/russie.png')}}" > Russe : notions</li>
+            </ul>
+        </div>
+
+        <div class = CVgroupe style = "background-color: var(--color3);">
+            <h3>Loisirs</h3>
+            Voyages, running, escalade, cyclisme, slackline, plongée, cinéma, bricolage
+        </div>
+
+        <footer>
+            <!-- <iframe class = contact src="contact-frame.html" scrolling="no"></iframe> -->
+            <div class='section'>
+                <script src='contact-frame.js'></script>
+            </div>
+        </footer>
+    </div>
+{% endblock %}

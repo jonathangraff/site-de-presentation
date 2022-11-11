@@ -1,0 +1,25 @@
+rajouter image de profil
+rajouter la date de dernière mise à jour (Javascript ??)
+
+<SCRIPT language="javascript">
+<!--
+var derniereModif=document.lastModified;
+var dateModif = new Date(derniereModif);
+var joursem = dateModif.getDay();
+var jour = dateModif.getDate();
+var mois=dateModif.getMonth();
+var annee=dateModif.getYear();
+var heures=dateModif.getHours();
+var minutes=dateModif.getMinutes();
+
+var tabJours = new Array("dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi");
+var tabMois = new Array("janvier","février","mars","avril","mai","juin", "juillet","août","septembre","octobre","novembre","décembre");
+
+document.write("Dernière mise á jour le ");
+document.write(tabJours[joursem]+" "+jour+" "+tabMois[mois]+" "+annee);
+
+//-->
+</SCRIPT>
+
+
+https://forums.commentcamarche.net/forum/affich-15365246-date-de-derniere-mise-a-jour-d-un-site-web
